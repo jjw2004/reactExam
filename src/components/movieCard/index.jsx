@@ -62,7 +62,7 @@ export default function MovieCard({ movie, action }) {
           <Grid size={{ xs: 6 }}>
             <Typography variant="h6" component="p">
               <CalendarIcon fontSize="small" />
-              {movie.release_date}
+              {new Date(movie.release_date).getDate() + " " + new Date(movie.release_date).toLocaleString('default', { month: 'short' } ) + " " + new Date(movie.release_date).getFullYear()}
             </Typography>
           </Grid>
           <Grid size={{ xs: 6 }}>
